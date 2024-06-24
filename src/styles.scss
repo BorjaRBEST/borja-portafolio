@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #81d6c4;
+    --secondary-color: #03dac6;
+    --divider-color: #bdbdbd;
+  }
+  
+  [data-theme='dark'] {
+    --background-color: #121212;
+    --text-color: #b4a9a9;
+    --primary-color: #71e0b2;
+    --secondary-color: #03dac6;
+    --divider-color: #373737;
+  }
+  
+  nav {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  

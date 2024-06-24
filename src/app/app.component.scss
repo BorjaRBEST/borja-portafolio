@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+  
+    a, button {
+      margin-left: 1rem;
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  
+    a:hover, button:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+  }
+  
