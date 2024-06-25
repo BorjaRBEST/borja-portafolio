@@ -16,16 +16,23 @@
       margin-right: 2rem;
 
       .profile-image {
-        width: 300px; /* Ajusta el tamaño según sea necesario */
+        width: 300px; 
         height: auto;
         border-radius: 20%;
         object-fit: cover;
+        /* Borde degradado difuminado */
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1), 
+                    0 0 20px 10px rgba(129, 214, 196, 0.2), 
+                    0 0 20px 10px rgba(3, 218, 198, 0.3);
+        /* Animación */
+        animation: fadeIn 2s ease-in-out;
       }
     }
 
     .text-container {
       flex: 1;
       text-align: left;
+      animation: slideInRight 1.5s ease-in-out;
 
       h2 {
         font-size: 2.5rem;
@@ -44,4 +51,124 @@
       }
     }
   }
+}
+
+/* Sección de habilidades */
+.skills {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    .skill-category {
+      background-color: var(--card-background-color);
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      flex: 1 1 200px;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .skill-icon {
+        margin-bottom: 1rem;
+        
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+
+        .skill-item {
+          background-color: var(--primary-color);
+          color: #fff;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+          font-size: 0.9rem;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Keyframes para animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Variables para el tema claro */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #81d6c4;
+  --secondary-color: #03dac6;
+  --divider-color: #bdbdbd;
+  --card-background-color: #ffffff;
+}
+
+/* Variables para el tema oscuro */
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #b4a9a9;
+  --primary-color: #71e0b2;
+  --secondary-color: #03dac6;
+  --divider-color: #373737;
+  --card-background-color: #1e1e1e;
 }
