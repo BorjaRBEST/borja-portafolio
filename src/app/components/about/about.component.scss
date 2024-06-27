@@ -23,7 +23,7 @@
         /* Borde degradado difuminado */
         box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1), 
                     0 0 20px 10px rgba(129, 214, 196, 0.2), 
-                    0 0 20px 10px rgba(3, 218, 198, 0.3);
+                    0 0 20px 10px rgba(161, 102, 216, 0.3);
         /* Animación */
         animation: fadeIn 2s ease-in-out;
       }
@@ -56,7 +56,7 @@
 /* Sección de habilidades */
 .skills {
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 4rem;
   background-color: var(--card-background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
