@@ -1,8 +1,23 @@
-<nav>
-  <a routerLink="/">Inicio</a>
-  <a routerLink="/about">Sobre mí</a>
-  <a routerLink="/projects">Proyectos</a>
-  <a routerLink="/contact">Contacto</a>
-  <button (click)="toggleTheme()">Dark Mode</button>
-</nav>
-<router-outlet></router-outlet>
+<div class="app-container">
+  <nav>
+    <a (click)="scrollToSection('home')">Inicio</a>
+    <a (click)="scrollToSection('about')">Sobre mí</a>
+    <a (click)="scrollToSection('projects')">Proyectos</a>
+    <a (click)="scrollToSection('contact')">Contacto</a>
+    <button (click)="toggleTheme()">Dark Mode</button>
+  </nav>
+  <div class="content">
+    <section id="home">
+      <app-home></app-home>
+    </section>
+    <section id="about">
+      <app-about></app-about>
+    </section>
+    <section id="projects">
+      <app-projects></app-projects>
+    </section>
+    <section id="contact">
+      <app-contact></app-contact>
+    </section>
+  </div>
+</div>

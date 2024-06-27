@@ -1,25 +1,48 @@
+.app-container {
+  display: flex;
+}
+
 nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 1rem;
-  
-    a, button {
-      margin-left: 1rem;
-      color: var(--text-color);
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-  
-    a:hover, button:hover {
-      background-color: var(--secondary-color);
-      color: var(--text-color);
-    }
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  height: 100vh;
+
+  a, button {
+    margin: 1rem 0;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
   }
-  
+
+  a:hover, button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+section {
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
