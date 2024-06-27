@@ -1,14 +1,21 @@
 .app-container {
   display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 nav {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 150px;
   background-color: var(--primary-color);
   padding: 1rem;
   height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  justify-content: space-between; /* Ensure the theme toggle is at the bottom */
 
   a, button {
     margin: 1rem 0;
@@ -27,22 +34,53 @@ nav {
     background-color: var(--secondary-color);
     color: var(--text-color);
   }
+
+  .theme-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; /* Push it to the bottom */
+    padding-top: 1rem;
+    border-top: 1px solid var(--divider-color);
+
+    .theme-icon {
+      width: 24px;
+      height: 24px;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .theme-icon:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .content {
   flex: 1;
+  margin-left: 150px;
   padding: 2rem;
   overflow-y: auto;
+  height: auto;
 }
 
-section {
-  margin-bottom: 2rem;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+/* Variables para el tema claro */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #cec4d1;
+  --secondary-color: #b687cc;
+  --divider-color: #bdbdbd;
+  --card-background-color: #ffffff;
+}
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Variables para el tema oscuro */
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #b4a9a9;
+  --primary-color: #71e0b2;
+  --secondary-color: #03dac6;
+  --divider-color: #373737;
+  --card-background-color: #1e1e1e;
 }
