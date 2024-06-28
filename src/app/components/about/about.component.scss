@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin: 2rem 2rem 2rem 220px;  /* Ajusta el margen para igualar el margen izquierdo */
+  margin: 2rem 2rem 2rem 220px;  
 
   .container {
     display: flex;
@@ -19,7 +19,7 @@
       .profile-image {
         width: 300px; 
         height: auto;
-        border-radius: 20%;
+        
         mask-image: linear-gradient(
           black 90%,
           transparent 100%
@@ -42,7 +42,7 @@
       h2 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         text-align: center;
       }
 
@@ -101,7 +101,7 @@
       h2 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
       }
 
       .skills-list {
@@ -112,7 +112,7 @@
 
         .skill-item {
           background-color: var(--primary-color);
-          color: #fff;
+          color: var(--text-color);
           padding: 0.5rem 1rem;
           border-radius: 5px;
           font-size: 0.9rem;
