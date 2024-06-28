@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin: 2rem 2rem 2rem 220px;  
+  margin: 2rem 2rem 2rem 2rem;  
 
   .container {
     display: flex;
@@ -40,10 +40,24 @@
       animation: slideInRight 1.5s ease-in-out;
 
       h2 {
-        font-size: 2.5rem;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        color: var(--secondary-color);
+        font-family: 'Courier Prime', monospace; // Usa una fuente especial
+        background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
+        background-clip: text; 
+      }
+      h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         color: var(--secondary-color);
-        text-align: center;
+        font-family: 'Dancing Script', cursive; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
       }
 
       p {
@@ -52,7 +66,7 @@
         color: var(--text-color);
         max-width: 600px;
         margin: 0 auto;
-        text-align: center;
+        text-align: justify;
       }
     }
   }
@@ -99,9 +113,11 @@
       }
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
         color: var(--secondary-color);
+        font-family: 'Dancing Script', cursive; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
       }
 
       .skills-list {
