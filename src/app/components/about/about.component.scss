@@ -66,7 +66,7 @@
         color: var(--text-color);
         max-width: 600px;
         margin: 0 auto;
-        text-align: justify;
+        text-align: left;
       }
     }
   }
@@ -76,9 +76,7 @@
 .skills {
   margin: 2rem 2rem 2rem 4rem;  
   padding: 4rem;
-  background-color: var(--card-background-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
   margin-bottom: 2rem;
 
   .skills-container {

@@ -1,30 +1,70 @@
-.projects {
-  margin: 2rem 2rem 2rem 4rem;  // Control de margenes arriba, derecha, abajo e izquierda en ese orden
-  margin-bottom: 2rem;
+h2 {
+  font-size: 4rem;
+  margin: 2rem 10rem 2rem 10rem;
+  color: var(--secondary-color);
+  font-family: 'Courier Prime', monospace; // Usa una fuente especial
+  background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
+  background-clip: text; 
+}
 
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.projects {
+  margin: 2rem 2rem 2rem 4rem; // Control de margenes arriba, derecha, abajo e izquierda en ese orden
+  margin-bottom: 4rem;
+
 
     .project {
+      margin: 2rem 20rem 2rem 20rem;
       background-color: var(--card-background-color);
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.5s ease; // Ajusta la duración de la transición aquí
+      overflow: hidden;
 
       h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        text-align: center ;
+        font-size: 2.5rem;
         color: var(--secondary-color);
         font-family: 'Courier Prime', monospace;  
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
       }
 
-      p {
-        font-size: 1rem;
-        color: var(--text-color);
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease; // Ajusta la duración de la transición aquí
+        opacity: 0;
+
+        p {
+          font-size: 1rem;
+          color: var(--text-color);
+        }
+
+        .project-image {
+          width: 100%;
+          border-radius: 8px;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          transition: opacity 0.5s ease; // Ajusta la duración de la transición aquí
+        }
+
+        .github-icon {
+          width: 32px;
+          height: 32px;
+          margin-top: 1rem;
+          display: block;
+        }
+      }
+      
+
+      &.expanded .content {
+        max-height: 500px; // Ajusta según sea necesario
+        opacity: 1;
       }
     }
-  }
+  
 }

@@ -7,9 +7,14 @@
     h2 {
       font-size: 3rem;
       margin-bottom: 2rem;
+      margin-top: 2rem;
       color: var(--secondary-color);
-      font-family: 'Courier Prime', monospace; 
+      font-family: 'Courier Prime', monospace; // Usa una fuente especial
+      background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
+      background-clip: text; 
     }
 
     form {

@@ -1,12 +1,27 @@
 <div id="projects" class="projects">
+  <h2>Proyectos</h2>
   <div class="container">
-    <div class="project">
-      <h3>Proyecto 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="project" (click)="toggleProject($event)">
+      <h3>Flappy Bird</h3>
+      <div class="content">
+        <p>Este proyecto fué una de las prácticas de mi grado, en él que recreé un Flappy Bird utilizando Unity. Agregué música de fondo, sonidos y contador con record personal.</p>
+        <img src="assets/img/flappybird.webp" class="project-image">
+        <p>Repositorio GitHub:</p>
+        <a href="https://github.com/tuusuario/flappybird" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Proyecto 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="project" (click)="toggleProject($event)">
+      <h3>GALILEO</h3>
+      <div class="content">
+        <p>Este ha sido mi proyecto más ambicioso hasta el momento. En mis prácticas en empresa desarrollé una app móvil con el framework Flutter. Es una app educativa dirigida a realizar diferentes experimentos aplicando el método científico, de forma animada y dinámica. Está pendiente de comercialización.</p>
+        <img src="assets/img/galileo.webp" class="project-image">
+        <p>Repositorio GitHub:</p>
+        <a href="https://github.com/tuusuario/flappybird" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub" class="github-icon">
+        </a>
+      </div>
     </div>
     <!-- Añadir más proyectos aquí -->
   </div>
