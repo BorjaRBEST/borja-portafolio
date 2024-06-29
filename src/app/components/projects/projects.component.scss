@@ -1,70 +1,75 @@
-h2 {
-  font-size: 4rem;
-  margin: 2rem 10rem 2rem 10rem;
-  color: var(--secondary-color);
-  font-family: 'Courier Prime', monospace; // Usa una fuente especial
-  background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
-  background-clip: text; 
-}
-
 .projects {
-  margin: 2rem 2rem 2rem 4rem; // Control de margenes arriba, derecha, abajo e izquierda en ese orden
-  margin-bottom: 4rem;
+  margin: 2rem auto;
 
+  h2 {
+    font-size: 3rem; 
+    margin: 2rem auto; 
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: 'Courier Prime', monospace; 
+    background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    background-clip: text; 
+  }
 
-    .project {
-      margin: 2rem 20rem 2rem 20rem;
-      background-color: var(--card-background-color);
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: all 0.5s ease; // Ajusta la duración de la transición aquí
+  .project {
+    margin: 1rem auto;
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    max-width: 600px; // Ancho máximo de las tarjetas
+    width: 100%; // Ancho completo hasta el máximo permitido
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      margin: 1rem 0; // Ajuste de margen superior e inferior
+      text-align: center;
+      font-size: 2rem; // Tamaño de fuente más pequeño para el título del proyecto
+      color: var(--secondary-color);
+      font-family: 'Courier Prime', monospace;  
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    .content {
+      max-height: 0;
       overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
 
-      h3 {
-        text-align: center ;
-        font-size: 2.5rem;
-        color: var(--secondary-color);
-        font-family: 'Courier Prime', monospace;  
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+      p {
+        font-size: 1rem;
+        color: var(--text-color);
       }
 
-      .content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease, opacity 0.5s ease; // Ajusta la duración de la transición aquí
-        opacity: 0;
-
-        p {
-          font-size: 1rem;
-          color: var(--text-color);
-        }
-
-        .project-image {
-          width: 100%;
-          border-radius: 8px;
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          transition: opacity 0.5s ease; // Ajusta la duración de la transición aquí
-        }
-
-        .github-icon {
-          width: 32px;
-          height: 32px;
-          margin-top: 1rem;
-          display: block;
-        }
+      .project-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        transition: opacity 0.5s ease;
       }
-      
 
-      &.expanded .content {
-        max-height: 500px; // Ajusta según sea necesario
-        opacity: 1;
+      .github-icon {
+        width: 32px;
+        height: 32px;
+        margin-top: 1rem;
+        display: block;
       }
     }
-  
+
+    &.expanded .content {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
 }
