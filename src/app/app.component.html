@@ -1,0 +1,26 @@
+<div class="app-container">
+  <nav>
+    <a (click)="scrollToSection('home')">Inicio</a>
+    <a (click)="scrollToSection('about')">Sobre mí</a>
+    <a (click)="scrollToSection('projects')">Proyectos</a>
+    <a (click)="scrollToSection('contact')">Contacto</a>
+    <div class="theme-toggle">
+      <img src="assets/icons/light.png" (click)="toggleTheme()" class="theme-icon" title="Modo Claro">
+      <img src="assets/icons/dark.png" (click)="toggleTheme()" class="theme-icon" title="Modo Oscuro">
+    </div>
+  </nav>
+  <div class="content">
+    <section id="home">
+      <app-home></app-home>
+    </section>
+    <section id="about">
+      <app-about></app-about>
+    </section>
+    <section id="projects">
+      <app-projects></app-projects>
+    </section>
+    <section id="contact">
+      <app-contact></app-contact>
+    </section>
+  </div>
+</div>
