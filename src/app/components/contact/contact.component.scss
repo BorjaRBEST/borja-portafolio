@@ -9,11 +9,11 @@
       margin-bottom: 2rem;
       margin-top: 2rem;
       color: var(--secondary-color);
-      font-family: 'Courier Prime', monospace; // Usa una fuente especial
+      font-family: 'Courier Prime', monospace; 
       background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
       background-clip: text; 
     }
 
@@ -36,22 +36,21 @@
         width: 100%;
         background-color: var(--background-color);
         color: var(--text-color);
-        box-sizing: border-box; // Asegura que el padding no afecte el ancho total
+        box-sizing: border-box;
       }
 
       button {
         padding: 0.75rem;
+        font-family: 'Courier Prime', monospace; 
         background-color: var(--secondary-color);
-        color: var(--background-color); 
         border: none;
         border-radius: 4px;
         cursor: pointer;
         text-align: center; 
+        color: var(--text-color);
+        font-size: 1rem;
+        font-weight: bold;
         width: 100%; 
-      }
-
-      button:hover {
-        background-color: var(--primary-color);
       }
     }
   }
