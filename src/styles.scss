@@ -1,4 +1,4 @@
-/* styles.scss */
+
 body, html {
   height: 100%;
   margin: 0;
@@ -54,6 +54,8 @@ nav {
   --secondary-color: #ca63fa;
   --divider-color: #bdbdbd;
   --card-background-color: #ffffff;
+  --hoover-bg-color: #d1cfd2;
+
 }
 
 /* Variables para el tema oscuro */
@@ -64,4 +66,5 @@ nav {
   --secondary-color: #6b3285;
   --divider-color: #373737;
   --card-background-color: #1e1e1e;
+  --hoover-bg-color: #262525;
 }

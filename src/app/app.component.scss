@@ -15,7 +15,7 @@ nav {
   left: 0;
   top: 0;
   bottom: 0;
-  justify-content: space-between; 
+  justify-content: space-between;
 
   a, button {
     margin: 1rem 0;
@@ -28,20 +28,39 @@ nav {
     background: none;
     cursor: pointer;
     text-align: left;
+
+    &:hover {
+      background-color: var(--hoover-bg-color);
+      color: var(--text-color);
+    }
   }
 
-  a:hover, button:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color);
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: auto;
+    margin-bottom: 1rem;
+
+    img {
+      width: 32px;
+      height: 32px;
+      margin: 0.1rem 0; // Reducir el margen para acercar los iconos
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
   }
 
   .theme-toggle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: auto; 
-    padding-top: 1rem;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
 
     .theme-icon {
       width: 24px;
@@ -64,5 +83,3 @@ nav {
   overflow-y: auto;
   height: auto;
 }
-
-
