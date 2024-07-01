@@ -23,8 +23,8 @@
     cursor: pointer;
     transition: all 0.5s ease;
     overflow: hidden;
-    max-width: 600px; // Ancho máximo de las tarjetas
-    width: 100%; // Ancho completo hasta el máximo permitido
+    max-width: 600px; 
+    width: 100%; 
 
     &:hover {
       transform: scale(1.05);
@@ -32,9 +32,9 @@
     }
 
     h3 {
-      margin: 1rem 0; // Ajuste de margen superior e inferior
+      margin: 1rem 0; 
       text-align: center;
-      font-size: 2rem; // Tamaño de fuente más pequeño para el título del proyecto
+      font-size: 2rem; 
       color: var(--secondary-color);
       font-family: 'Courier Prime', monospace;  
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 

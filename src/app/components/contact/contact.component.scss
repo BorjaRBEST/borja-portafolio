@@ -1,57 +1,49 @@
 .contact {
+  position: relative;
+  padding: 2rem;
+  
   .container {
-    max-width: 300px;
+    max-width: 600px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
 
     h2 {
       font-size: 3rem;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
       color: var(--secondary-color);
-      font-family: 'Courier Prime', monospace; 
+      font-family: 'Courier Prime', monospace;
       background: linear-gradient(90deg, rgba(107,50,133,1) 0%, rgba(255,0,132,1) 50%, rgba(238,174,202,1) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-      background-clip: text; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      background-clip: text;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    p {
+      font-size: 1.5rem;
+      font-style: bold;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin: 2rem 0;
+    }
+  }
 
-      label {
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--text-color);
-      }
+  .image-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
 
-      input, textarea {
-        padding: 0.5rem;
-        border: 1px solid var(--divider-color);
-        border-radius: 4px;
-        font-size: 1rem;
-        width: 100%;
-        background-color: var(--background-color);
-        color: var(--text-color);
-        box-sizing: border-box;
-      }
-
-      button {
-        padding: 0.75rem;
-        font-family: 'Courier Prime', monospace; 
-        background-color: var(--secondary-color);
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        text-align: center; 
-        color: var(--text-color);
-        font-size: 1rem;
-        font-weight: bold;
-        width: 100%; 
-      }
+    .profile-image {
+      width: 150px; // Ajusta el tamaño según sea necesario
+      height: auto;
+      mask-image: linear-gradient(black 90%, transparent 100%);
+      object-fit: cover;
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1), 
+                  0 0 20px 10px rgba(129, 214, 196, 0.2), 
+                  0 0 20px 10px rgba(161, 102, 216, 0.3);
+      animation: fadeIn 2s ease-in-out;
     }
   }
 }
