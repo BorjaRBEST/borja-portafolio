@@ -121,45 +121,50 @@ nav {
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples filas si es necesario */
 
     a, button {
       display: block;
       margin: 0.5rem;
-      padding: 0.5rem;
-      font-size: 0.7rem; /* Ajustar el tamaño de fuente para caber todos los elementos */
+      padding: 0.3rem; /* Ajustar el padding */
+      font-size: 0.7rem; /* Ajustar el tamaño de fuente */
     }
 
     .social-icons {
-      flex-direction: row; /* Cambia la dirección a fila */
+      flex-direction: row;
       margin: 0;
-      order: 1; /* Ordenar los iconos sociales en la parte superior */
+      order: 1;
+      justify-content: center;
+      flex: 1; /* Permitir que los iconos sociales usen el espacio disponible */
 
       img {
-        width: 24px; /* Reducir el tamaño de los iconos */
-        height: 24px; /* Reducir el tamaño de los iconos */
+        width: 20px; /* Reducir el tamaño de los iconos */
+        height: 20px;
       }
     }
 
     .theme-toggle {
       flex-direction: row;
       margin: 0;
-      order: 2; /* Ordenar el toggle de tema después de los iconos sociales */
+      order: 2;
+      justify-content: center;
+      flex: 1; /* Permitir que los iconos de tema usen el espacio disponible */
 
       .theme-icon {
         width: 20px; /* Reducir el tamaño de los iconos de tema */
-        height: 20px; /* Reducir el tamaño de los iconos de tema */
+        height: 20px;
       }
     }
   }
 
   .content {
-    margin-left: 0; /* Eliminar el margen dejado por la navegación fija */
-    padding: 1rem; /* Ajustar el padding según sea necesario */
+    margin-left: 0;
+    padding: 1rem;
   }
 
   .about .container,
   .skills .skills-container {
-    flex-direction: column; /* Colocar los elementos uno debajo de otro */
+    flex-direction: column;
     text-align: center;
   }
 
@@ -173,7 +178,7 @@ nav {
   .about .image-container .profile-image,
   .projects .project .project-image {
     width: 100%;
-    max-width: 200px; /* Ajustar según sea necesario */
+    max-width: 200px;
   }
 
   .about h2,

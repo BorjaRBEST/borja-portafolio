@@ -93,10 +93,12 @@
 
       h2 {
         font-size: 2.5rem;
+        text-align: center;
       }
 
       h3 {
         font-size: 1.5rem;
+        text-align: center;
       }
 
       p {
@@ -112,6 +114,7 @@
   margin: 2rem 2rem 2rem 4rem;
   padding: 4rem;
   margin-bottom: 2rem;
+  text-align: center;
 
   .skills-container {
     display: flex;
@@ -141,6 +144,7 @@
         img {
           width: 50px;
           height: 50px;
+          align-items: center;
         }
       }
 
@@ -150,6 +154,7 @@
         color: var(--secondary-color);
         font-family: 'Dancing Script', cursive;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
       }
 
       .skills-list {
