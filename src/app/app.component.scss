@@ -46,7 +46,7 @@ nav {
     img {
       width: 32px;
       height: 32px;
-      margin: 0.1rem 0; // Reducir el margen para acercar los iconos
+      margin: 0.1rem 0;
       cursor: pointer;
       transition: transform 0.3s;
     }
@@ -82,4 +82,45 @@ nav {
   padding: 2rem;
   overflow-y: auto;
   height: auto;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a, nav button {
+    display: none;
+  }
+
+  nav .social-icons {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  nav .theme-toggle {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  nav .social-icons img,
+  nav .theme-toggle .theme-icon {
+    margin: 0 0.5rem;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
 }

@@ -17,17 +17,40 @@
 
   h2 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     color: var(--secondary-color);
     font-family: 'Dancing Script', cursive; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); // Agrega sombra al texto
   }
 
   p {
-    
-    text-align: left;
-    margin: 3rem 10rem;
-    font-size: 1.5rem;
-    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 1rem 1rem; /* Reducir margen lateral para dispositivos móviles */
+    font-size: 1rem;
+    text-align: center; /* Ajustar el texto para mejor legibilidad */
   }
 }

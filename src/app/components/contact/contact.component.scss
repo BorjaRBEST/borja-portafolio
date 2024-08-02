@@ -21,7 +21,7 @@
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-style: bold;
       line-height: 1.6;
       color: var(--text-color);
@@ -44,6 +44,36 @@
                   0 0 20px 10px rgba(129, 214, 196, 0.2), 
                   0 0 20px 10px rgba(161, 102, 216, 0.3);
       animation: fadeIn 2s ease-in-out;
+    }
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .image-container {
+    position: relative;
+    margin: 1rem auto;
+
+    .profile-image {
+      width: 100%;
+      max-width: 100px;
     }
   }
 }
