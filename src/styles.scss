@@ -121,25 +121,35 @@ nav {
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
-  }
 
-  nav a{
-    display: none; /* Esconder los textos de los enlaces */
-  }
+    a, button {
+      display: block;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      font-size: 0.7rem; /* Ajustar el tamaño de fuente para caber todos los elementos */
+    }
 
-  nav .social-icons {
-    flex-direction: row;
-    margin: 0;
-  }
+    .social-icons {
+      flex-direction: row; /* Cambia la dirección a fila */
+      margin: 0;
+      order: 1; /* Ordenar los iconos sociales en la parte superior */
 
-  nav .theme-toggle {
-    flex-direction: row;
-    margin: 0;
-  }
+      img {
+        width: 24px; /* Reducir el tamaño de los iconos */
+        height: 24px; /* Reducir el tamaño de los iconos */
+      }
+    }
 
-  nav .social-icons img,
-  nav .theme-toggle .theme-icon {
-    margin: 0 0.5rem; /* Espaciado horizontal para los íconos */
+    .theme-toggle {
+      flex-direction: row;
+      margin: 0;
+      order: 2; /* Ordenar el toggle de tema después de los iconos sociales */
+
+      .theme-icon {
+        width: 20px; /* Reducir el tamaño de los iconos de tema */
+        height: 20px; /* Reducir el tamaño de los iconos de tema */
+      }
+    }
   }
 
   .content {

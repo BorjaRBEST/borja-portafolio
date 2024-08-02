@@ -98,20 +98,18 @@ nav {
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
-  }
 
-  nav a, nav button {
-    display: none;
-  }
+    .social-icons {
+      flex-direction: row; 
+      margin: 0;
+      order: 1; 
+    }
 
-  nav .social-icons {
-    flex-direction: row;
-    margin: 0;
-  }
-
-  nav .theme-toggle {
-    flex-direction: row;
-    margin: 0;
+    .theme-toggle {
+      flex-direction: row;
+      margin: 0;
+      order: 2; 
+    } 
   }
 
   nav .social-icons img,
@@ -120,7 +118,40 @@ nav {
   }
 
   .content {
-    margin-left: 0;
-    padding: 1rem;
+    margin-left: 0; 
+    padding: 1rem; 
+  }
+
+  .about .container,
+  .skills .skills-container {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .about .image-container,
+  .skills .skill-category,
+  .projects .project {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .about .image-container .profile-image,
+  .projects .project .project-image {
+    width: 100%;
+    max-width: 200px; 
+  }
+
+  .about h2,
+  .about h3,
+  .skills .skill-category h2,
+  .projects h2,
+  .projects .project h3 {
+    font-size: 1.5rem;
+  }
+
+  .about p,
+  .skills .skill-category .skills-list .skill-item,
+  .projects .project p {
+    font-size: 1rem;
   }
 }

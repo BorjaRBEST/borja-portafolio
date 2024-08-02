@@ -111,7 +111,6 @@
 .skills {
   margin: 2rem 2rem 2rem 4rem;
   padding: 4rem;
-
   margin-bottom: 2rem;
 
   .skills-container {
@@ -171,6 +170,25 @@
             background-color: var(--secondary-color);
           }
         }
+      }
+    }
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .skills {
+    margin: 1rem;
+    padding: 2rem;
+
+    .skills-container {
+      justify-content: center;
+      text-align: center;
+
+      .skill-category {
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem auto;
       }
     }
   }
