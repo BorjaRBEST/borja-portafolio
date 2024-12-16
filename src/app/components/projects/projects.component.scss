@@ -97,7 +97,18 @@
     font-size: 1rem;
     text-align: center;
   }
-
+  .web-icon {
+    width: 32px;  /* Tamaño deseado */
+    height: 32px; 
+    display: inline-block; /* Evita que ocupe todo el ancho */
+    margin: 0.5rem auto; /* Centrado vertical y horizontal */
+    transition: transform 0.3s ease; /* Efecto hover opcional */
+  }
+  
+  .web-icon:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+  }
+  
   .content .project-image {
     margin: 1rem auto; /* Centrar la imagen horizontalmente */
     max-width: 90%; /* Ajustar el tamaño máximo según sea necesario */
